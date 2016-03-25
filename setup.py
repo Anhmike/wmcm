@@ -9,5 +9,6 @@ setup(
     license = "BSD",
     keywords = "",
     url = "https://github.com/moody-marlin/wmcm.git",
+    install_requires = ['datetime'],
     packages=['wmcm'],
 )
