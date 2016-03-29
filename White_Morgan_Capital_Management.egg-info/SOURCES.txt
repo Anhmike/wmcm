@@ -1,6 +1,0 @@
-White_Morgan_Capital_Management.egg-info/PKG-INFO
-White_Morgan_Capital_Management.egg-info/SOURCES.txt
-White_Morgan_Capital_Management.egg-info/dependency_links.txt
-White_Morgan_Capital_Management.egg-info/top_level.txt
-wmcm/__init__.py
-wmcm/functions.py

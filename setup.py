@@ -9,6 +9,9 @@ setup(
     license = "BSD",
     keywords = "",
     url = "https://github.com/moody-marlin/wmcm.git",
-    install_requires = ['datetime'],
+    install_requires = ['datetime',
+	'pandas',
+	'numpy',
+	'pandas_datareader'],
     packages=['wmcm'],
 )
