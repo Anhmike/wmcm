@@ -14,12 +14,8 @@ stock
 		ta_RSI(n=14) - Relative Strength Index for length n
 		ta_EoM(n=14) - Ease of movement for length n
 
-
-
-universe
-	collection of stocks
-	When created, also pull prices for sector tickers found in stock symbols.
-
+strat
+	This means something.
 
 
 Functions:
