@@ -48,3 +48,16 @@ class stock(object):
 #   model=pd.ols(y=sym[price_def], x=SPY[price_def], window_type='rolling', 
 #                 window=wind, weights=sym['volume'])
 #    model.beta.columns = [price_def+'_beta'+str(wind),price_def+'_alpha'+str(wind)] #rename for plotting 
+
+    def set_strategy(self, name, function):
+        '''For a function which can operate on self.data, create a new attribute with strategy name.
+        This setup would imply all relevant information should be hardcoded back into self.data (e.g., betas)
+        Still need to consider how our backtesting / results summary will work before deciding what constraints to put on allowable functions.
+        ========================
+        Example Usage:
+        >>> AAPL = wmcm.stock("AAPL")
+        >>> AAPL.set_strategy("buy_everything", lambda : return 'BUY!')
+        >>> AAPL.buy_everything()
+        'BUY!' '''
+
+        setattr(self, name, function)
