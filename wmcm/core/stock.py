@@ -1,6 +1,7 @@
 from __future__ import print_function
 
 import datetime as dt
+import pandas as pd
 from pandas_datareader import data
 
 class stock(object):
@@ -24,6 +25,15 @@ class stock(object):
         except AttributeError:
             self._ticker = value
 
+    @property
+    def bench(self, tic = 'SPY', start='2010-01-01', end='2012-09-20'):
+        '''Creates benchmark portfolio.  Currently assumes SPY.'''
+        return stock(tic)
+
+    @bench.setter
+    def bench(self, tic, start, end):
+        self._bench = self.bench(tic, start, end)
+
     def __init__(self, tic, start='2010-01-01', end='2012-09-20'):
         if tic is None:
             tic='SPY'
@@ -44,13 +54,14 @@ class stock(object):
 
     def roll_beta(self, window = 60, market = 'SPY'):
         '''Computes rolling beta against specified index.  Not sure how this should get returned.'''
-#        model = pd.ols(y = self['Close'], x = , window_type = 'rolling', window=window)
+        model = pd.ols(y = self['Close'], x = self.bench['Close'], window_type = 'rolling', window=window)
+        return model
 #   model=pd.ols(y=sym[price_def], x=SPY[price_def], window_type='rolling', 
 #                 window=wind, weights=sym['volume'])
 #    model.beta.columns = [price_def+'_beta'+str(wind),price_def+'_alpha'+str(wind)] #rename for plotting 
 
     def set_strategy(self, name, function):
-        '''For a function which can operate on self.data, create a new attribute with strategy name.
+        '''Ideally for a function which can operate on the rows of self.data, create a new attribute with strategy name.
         This setup would imply all relevant information should be hardcoded back into self.data (e.g., betas)
         Still need to consider how our backtesting / results summary will work before deciding what constraints to put on allowable functions.
         ========================
