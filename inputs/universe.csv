@@ -1,0 +1,505 @@
+symbol,company_name,index_weight,sector,sector_name
+PG,Procter & Gamble,11.90%,XLP,Consumper Staples
+KO,Coca-Cola Co,9.31%,XLP,Consumper Staples
+PM,Philip Morris International,7.61%,XLP,Consumper Staples
+CVS,CVS Health Corporation,6.16%,XLP,Consumper Staples
+MO,Altria Group Inc,5.84%,XLP,Consumper Staples
+WMT,Wal-Mart Stores,5.56%,XLP,Consumper Staples
+PEP,PepsiCo Inc,4.53%,XLP,Consumper Staples
+WBA,Walgreens Boots Alliance Inc,4.24%,XLP,Consumper Staples
+COST,Costco Wholesale Corp,3.96%,XLP,Consumper Staples
+MDLZ,Mondelez International Inc,3.53%,XLP,Consumper Staples
+CL,Colgate-Palmolive Co,3.39%,XLP,Consumper Staples
+KMB,Kimberly-Clark,2.74%,XLP,Consumper Staples
+KHC,The Kraft Heinz Company,2.50%,XLP,Consumper Staples
+RAI,Reynolds American Inc,2.42%,XLP,Consumper Staples
+KR,Kroger Co,2.31%,XLP,Consumper Staples
+STZ,Constellation Brands Inc A,2.19%,XLP,Consumper Staples
+GIS,General Mills Inc,2.00%,XLP,Consumper Staples
+MNST,Monster Beverage Corp New,1.41%,XLP,Consumper Staples
+SYY,Sysco Corp,1.29%,XLP,Consumper Staples
+EL,Estee Lauder Cos. A,1.23%,XLP,Consumper Staples
+ADM,Archer-Daniels-Midland Co,1.22%,XLP,Consumper Staples
+K,Kellogg Co,1.18%,XLP,Consumper Staples
+DPS,Dr Pepper Snapple Group,1.15%,XLP,Consumper Staples
+CAG,ConAgra Foods Inc,1.14%,XLP,Consumper Staples
+TSN,Tyson Foods Inc A,1.13%,XLP,Consumper Staples
+CLX,Clorox Co,1.10%,XLP,Consumper Staples
+SJM,Smucker J.M. Co,1.00%,XLP,Consumper Staples
+TAP,Molson Coors Brewing Co B,1.00%,XLP,Consumper Staples
+MJN,Mead Johnson Nutrition Co,0.86%,XLP,Consumper Staples
+HRL,Hormel Foods Corp,0.82%,XLP,Consumper Staples
+HSY,Hershey Foods Corp,0.80%,XLP,Consumper Staples
+CPB,Campbell Soup Co,0.72%,XLP,Consumper Staples
+CCE,Coca-Cola Enterprises,0.65%,XLP,Consumper Staples
+MKC,McCormick & Co,0.65%,XLP,Consumper Staples
+WFM,Whole Foods Market Inc,0.65%,XLP,Consumper Staples
+BF.b,Brown-Forman Corp B,0.62%,XLP,Consumper Staples
+CHD,Church & Dwight Co,0.60%,XLP,Consumper Staples
+GMCR,Keurig Green Mountain Inc,0.59%,XLP,Consumper Staples
+AMZN,Amazon.com Inc,10.61%,XLY,Consumer Discretionary
+HD,Home Depot Inc,7.20%,XLY,Consumer Discretionary
+DIS,Walt Disney Co,6.82%,XLY,Consumer Discretionary
+CMCSA,Comcast Corp A,6.25%,XLY,Consumer Discretionary
+MCD,McDonald's Corp,5.03%,XLY,Consumer Discretionary
+SBUX,Starbucks Corp,4.07%,XLY,Consumer Discretionary
+NKE,NIKE Inc B,3.80%,XLY,Consumer Discretionary
+LOW,Lowe's Cos Inc,2.99%,XLY,Consumer Discretionary
+TWX,Time Warner Inc,2.62%,XLY,Consumer Discretionary
+PCLN,The Priceline Group Inc,2.58%,XLY,Consumer Discretionary
+TWC,Time Warner Cable Inc,2.39%,XLY,Consumer Discretionary
+F,Ford Motor Co,2.19%,XLY,Consumer Discretionary
+TJX,TJX Cos Inc,2.14%,XLY,Consumer Discretionary
+NFLX,NetFlix Inc,1.99%,XLY,Consumer Discretionary
+TGT,Target Corp,1.99%,XLY,Consumer Discretionary
+GM,General Motors Company,1.92%,XLY,Consumer Discretionary
+FOXA,Twenty-First Century Fox Inc A,1.43%,XLY,Consumer Discretionary
+YUM,Yum! Brands Inc,1.38%,XLY,Consumer Discretionary
+LB,L Brands Inc,1.13%,XLY,Consumer Discretionary
+ORLY,O'Reilly Automotive,1.09%,XLY,Consumer Discretionary
+JCI,Johnson Controls Inc,1.07%,XLY,Consumer Discretionary
+CCL,Carnival Corp,1.06%,XLY,Consumer Discretionary
+AZO,AutoZone Inc,1.03%,XLY,Consumer Discretionary
+ROST,Ross Stores Inc,1.01%,XLY,Consumer Discretionary
+DG,Dollar General Corp,0.97%,XLY,Consumer Discretionary
+CBS,CBS Corp B,0.94%,XLY,Consumer Discretionary
+VFC,VF Corp,0.92%,XLY,Consumer Discretionary
+DLPH,Delphi Automotive PLC,0.84%,XLY,Consumer Discretionary
+DLTR,Dollar Tree Inc,0.84%,XLY,Consumer Discretionary
+OMC,Omnicom Group,0.79%,XLY,Consumer Discretionary
+VIAB,Viacom Inc B,0.69%,XLY,Consumer Discretionary
+RCL,Royal Caribbean Cruises Ltd,0.68%,XLY,Consumer Discretionary
+CMG,Chipotle Mexican Grill Inc.,0.65%,XLY,Consumer Discretionary
+M,Macy's Inc,0.60%,XLY,Consumer Discretionary
+UA,Under Armour Inc A,0.59%,XLY,Consumer Discretionary
+EXPE,Expedia,0.58%,XLY,Consumer Discretionary
+GPC,Genuine Parts Co,0.56%,XLY,Consumer Discretionary
+MAR,Marriott Intl A,0.56%,XLY,Consumer Discretionary
+TSCO,Tractor Supply Co,0.53%,XLY,Consumer Discretionary
+HBI,Hanesbrands Inc,0.53%,XLY,Consumer Discretionary
+FOX,Twenty-First Century Fox Inc B,0.53%,XLY,Consumer Discretionary
+HOT,Starwood Hotel & Resort World,0.49%,XLY,Consumer Discretionary
+MHK,Mohawk Industries Inc,0.49%,XLY,Consumer Discretionary
+AAP,Advance Auto Parts Inc,0.49%,XLY,Consumer Discretionary
+WHR,Whirlpool Corp,0.48%,XLY,Consumer Discretionary
+NWL,Newell Rubbermaid Inc,0.46%,XLY,Consumer Discretionary
+SIG,Signet Jewelers Ltd,0.45%,XLY,Consumer Discretionary
+KMX,Carmax Inc,0.43%,XLY,Consumer Discretionary
+COH,Coach Inc,0.42%,XLY,Consumer Discretionary
+DHI,Horton D.R. Inc,0.42%,XLY,Consumer Discretionary
+IPG,Interpublic Group Cos,0.42%,XLY,Consumer Discretionary
+KSS,Kohl's Corp,0.42%,XLY,Consumer Discretionary
+MAT,Mattel Inc,0.41%,XLY,Consumer Discretionary
+BBY,Best Buy Co Inc,0.38%,XLY,Consumer Discretionary
+HAS,Hasbro Inc,0.38%,XLY,Consumer Discretionary
+TRIP,TripAdvisor Inc. A,0.37%,XLY,Consumer Discretionary
+HOG,Harley-Davidson Inc,0.36%,XLY,Consumer Discretionary
+HRB,Block H & R Inc,0.36%,XLY,Consumer Discretionary
+WYN,Wyndham Worldwide Corp,0.36%,XLY,Consumer Discretionary
+GT,Goodyear Tire & Rubber Co,0.35%,XLY,Consumer Discretionary
+LEN,Lennar Corp A,0.35%,XLY,Consumer Discretionary
+BBBY,Bed Bath & Beyond Inc,0.34%,XLY,Consumer Discretionary
+DRI,Darden Restaurants Inc,0.33%,XLY,Consumer Discretionary
+KORS,Michael Kors Holdings Ltd,0.33%,XLY,Consumer Discretionary
+CVC,Cablevision Systems Co A,0.32%,XLY,Consumer Discretionary
+TIF,Tiffany & Co,0.32%,XLY,Consumer Discretionary
+DISCK,Discovery Communications Inc C,0.32%,XLY,Consumer Discretionary
+BWA,Borgwarner Inc,0.30%,XLY,Consumer Discretionary
+JWN,Nordstrom Inc,0.30%,XLY,Consumer Discretionary
+RL,Ralph Lauren Corp A,0.29%,XLY,Consumer Discretionary
+PVH,PVH Corp,0.27%,XLY,Consumer Discretionary
+SPLS,Staples Inc,0.27%,XLY,Consumer Discretionary
+HAR,Harman Intl Industries Inc,0.26%,XLY,Consumer Discretionary
+SNI,Scripps Networks Interactive A,0.26%,XLY,Consumer Discretionary
+GPS,Gap Inc,0.25%,XLY,Consumer Discretionary
+LEG,Leggett & Platt,0.25%,XLY,Consumer Discretionary
+PHM,Pulte Group Inc,0.24%,XLY,Consumer Discretionary
+TGNA,TEGNA Inc,0.24%,XLY,Consumer Discretionary
+NWSA,News Corp A,0.22%,XLY,Consumer Discretionary
+WYNN,Wynn Resorts Ltd,0.22%,XLY,Consumer Discretionary
+DISCA,Discovery Communications Inc A,0.19%,XLY,Consumer Discretionary
+GRMN,Garmin Ltd,0.18%,XLY,Consumer Discretionary
+AN,AutoNation Inc,0.16%,XLY,Consumer Discretionary
+GME,GameStop Corp A,0.13%,XLY,Consumer Discretionary
+URBN,Urban Outfitters,0.09%,XLY,Consumer Discretionary
+NWS,News Corp B,0.07%,XLY,Consumer Discretionary
+XOM,Exxon Mobil Corp,19.49%,XLE,Energy
+CVX,Chevron Corp,14.55%,XLE,Energy
+SLB,Schlumberger Ltd,7.78%,XLE,Energy
+VLO,Valero Energy Corp,4.13%,XLE,Energy
+EOG,EOG Resources,4.01%,XLE,Energy
+OXY,Occidental Petroleum,3.85%,XLE,Energy
+PXD,Pioneer Natural Resources,3.76%,XLE,Energy
+PSX,Phillips 66,3.44%,XLE,Energy
+COP,ConocoPhillips,3.12%,XLE,Energy
+TSO,Tesoro Corp,3.11%,XLE,Energy
+HAL,Halliburton Co,2.80%,XLE,Energy
+KMI,Kinder Morgan Inc,2.54%,XLE,Energy
+SE,Spectra Energy Corp,2.24%,XLE,Energy
+BHI,Baker Hughes Inc,2.20%,XLE,Energy
+MPC,Marathon Petroleum Corp.,2.07%,XLE,Energy
+APC,Anadarko Petroleum Corp,1.90%,XLE,Energy
+WMB,The Williams Companies Inc,1.72%,XLE,Energy
+CAM,Cameron International Corp,1.68%,XLE,Energy
+COG,Cabot Oil & Gas A,1.59%,XLE,Energy
+APA,Apache Corp,1.56%,XLE,Energy
+NBL,Noble Energy Inc,1.53%,XLE,Energy
+NOV,National Oilwell Varco Inc,1.35%,XLE,Energy
+DVN,Devon Energy Corp,1.04%,XLE,Energy
+HES,Hess Corp,1.04%,XLE,Energy
+FTI,FMC Technologies Inc,0.90%,XLE,Energy
+EQT,EQT Corporation,0.80%,XLE,Energy
+XEC,Cimarex Energy Co,0.72%,XLE,Energy
+MRO,Marathon Oil Corp,0.65%,XLE,Energy
+RRC,Range Resources Corp,0.64%,XLE,Energy
+CPGX,Columbia Pipeline Group,0.63%,XLE,Energy
+OKE,ONEOK Inc,0.48%,XLE,Energy
+HP,Helmerich & Payne Inc,0.46%,XLE,Energy
+SWN,Southwestern Energy Co,0.39%,XLE,Energy
+NFX,Newfield Exploration Co,0.38%,XLE,Energy
+MUR,Murphy Oil Corp,0.35%,XLE,Energy
+RIG,Transocean Ltd,0.30%,XLE,Energy
+CHK,Chesapeake Energy Corp,0.22%,XLE,Energy
+CNX,CONSOL Energy Inc,0.20%,XLE,Energy
+ESV,Ensco PLC - CL A,0.20%,XLE,Energy
+DO,Diamond Offshore Drilling,0.16%,XLE,Energy
+BRK.b,Berkshire Hathaway B,10.99%,XLFS,Financial Services
+WFC,Wells Fargo & Co,10.52%,XLFS,Financial Services
+JPM,JP Morgan Chase & Co,9.68%,XLFS,Financial Services
+BAC,Bank of America Corp,6.52%,XLFS,Financial Services
+C,Citigroup Inc,5.65%,XLFS,Financial Services
+AIG,American Intl Group Inc,3.25%,XLFS,Financial Services
+USB,US Bancorp,2.99%,XLFS,Financial Services
+GS,Goldman Sachs Group Inc,2.75%,XLFS,Financial Services
+CB,Chubb Limited,2.34%,XLFS,Financial Services
+MET,Metlife Inc,2.27%,XLFS,Financial Services
+AXP,American Express Co,2.13%,XLFS,Financial Services
+PNC,PNC Finl Services Group,2.01%,XLFS,Financial Services
+MS,Morgan Stanley,1.79%,XLFS,Financial Services
+BK,The Bank of New York Mellon Corp,1.78%,XLFS,Financial Services
+BLK,BlackRock Inc,1.75%,XLFS,Financial Services
+COF,Capital One Financial,1.51%,XLFS,Financial Services
+PRU,Prudential Financial Inc,1.45%,XLFS,Financial Services
+TRV,Travelers Cos Inc,1.45%,XLFS,Financial Services
+SCHW,Schwab Charles Corp,1.43%,XLFS,Financial Services
+ICE,Intercontinental Exchange Inc,1.39%,XLFS,Financial Services
+CME,CME Group Inc A,1.33%,XLFS,Financial Services
+MMC,Marsh & McLennan Companies,1.27%,XLFS,Financial Services
+BBT,BB&T Corp,1.15%,XLFS,Financial Services
+AFL,AFLAC Inc,1.13%,XLFS,Financial Services
+SYF,Synchrony Financial,1.12%,XLFS,Financial Services
+AON,Aon plc,1.10%,XLFS,Financial Services
+MHFI,McGraw Hill Financial Inc,1.07%,XLFS,Financial Services
+ALL,Allstate Corp,1.05%,XLFS,Financial Services
+STT,State Street Corp,1.04%,XLFS,Financial Services
+DFS,Discover Financial Services,0.97%,XLFS,Financial Services
+STI,SunTrust Banks Inc (GA),0.83%,XLFS,Financial Services
+PGR,Progressive Corp,0.81%,XLFS,Financial Services
+TROW,T Rowe Price Group Inc,0.79%,XLFS,Financial Services
+MTB,M&T Bank Corp,0.78%,XLFS,Financial Services
+AMP,Ameriprise Financial Inc,0.75%,XLFS,Financial Services
+HIG,Hartford Finl Services Group,0.74%,XLFS,Financial Services
+MCO,Moody's Corp,0.71%,XLFS,Financial Services
+WLTW,Willis Towers Watson PLC,0.71%,XLFS,Financial Services
+NTRS,Northern Trust Corp (IL),0.61%,XLFS,Financial Services
+BEN,Franklin Resources Inc,0.60%,XLFS,Financial Services
+FITB,Fifth Third Bancorp (OH),0.59%,XLFS,Financial Services
+IVZ,Invesco Ltd,0.58%,XLFS,Financial Services
+XL,XL Group Plc,0.49%,XLFS,Financial Services
+PFG,Principal Financial Group,0.48%,XLFS,Financial Services
+RF,Regions Financial Corp,0.48%,XLFS,Financial Services
+LNC,Lincoln National Corp,0.46%,XLFS,Financial Services
+L,Loews Corp,0.45%,XLFS,Financial Services
+KEY,KeyCorp,0.44%,XLFS,Financial Services
+CINF,Cincinnati Financial Corp,0.38%,XLFS,Financial Services
+AMG,Affiliated Managers Grp,0.34%,XLFS,Financial Services
+HBAN,Huntington Bancshares (OH),0.34%,XLFS,Financial Services
+ETFC,E*TRADE Financial Corp,0.33%,XLFS,Financial Services
+UNM,Unum Group,0.32%,XLFS,Financial Services
+NDAQ,Nasdaq Inc,0.31%,XLFS,Financial Services
+CMA,Comerica Inc (MI),0.28%,XLFS,Financial Services
+TMK,Torchmark Corp,0.28%,XLFS,Financial Services
+LUK,Leucadia National Corp (NY),0.26%,XLFS,Financial Services
+AIZ,Assurant Inc,0.24%,XLFS,Financial Services
+ZION,Zions Bancorp (UT),0.21%,XLFS,Financial Services
+PBCT,People's United Financial Inc,0.20%,XLFS,Financial Services
+LM,Legg Mason Inc,0.16%,XLFS,Financial Services
+NAVI,Navient Corp,0.15%,XLFS,Financial Services
+JNJ,Johnson & Johnson,10.43%,XLV,Healthcare
+PFE,Pfizer Inc,7.38%,XLV,Healthcare
+MRK,Merck & Co Inc,5.59%,XLV,Healthcare
+GILD,Gilead Sciences Inc,5.16%,XLV,Healthcare
+AGN,Allergan plc,4.83%,XLV,Healthcare
+AMGN,Amgen Inc,4.59%,XLV,Healthcare
+UNH,Unitedhealth Group Inc,4.28%,XLV,Healthcare
+BMY,Bristol-Myers Squibb,4.21%,XLV,Healthcare
+MDT,Medtronic plc,4.18%,XLV,Healthcare
+ABBV,AbbVie Inc.,3.75%,XLV,Healthcare
+CELG,Celgene Corp,3.33%,XLV,Healthcare
+LLY,Lilly Eli & Co,3.14%,XLV,Healthcare
+BIIB,Biogen Inc,2.39%,XLV,Healthcare
+TMO,Thermo Fisher Scientific,2.10%,XLV,Healthcare
+ESRX,Express Scripts Holding Co.,2.00%,XLV,Healthcare
+ABT,Abbott Laboratories,1.97%,XLV,Healthcare
+MCK,McKesson Corp,1.57%,XLV,Healthcare
+AET,Aetna Inc,1.50%,XLV,Healthcare
+ANTM,Anthem Inc,1.48%,XLV,Healthcare
+REGN,Regeneron Pharmaceuticals Inc,1.46%,XLV,Healthcare
+CI,Cigna Corporation,1.43%,XLV,Healthcare
+ALXN,Alexion Pharmaceuticals Inc,1.40%,XLV,Healthcare
+BDX,Becton Dickinson & Co,1.22%,XLV,Healthcare
+SYK,Stryker Corp,1.17%,XLV,Healthcare
+CAH,Cardinal Health Inc,1.06%,XLV,Healthcare
+HUM,Humana Inc,1.03%,XLV,Healthcare
+ILMN,Illumina Inc,1.01%,XLV,Healthcare
+BSX,Boston Scientific Corp,0.94%,XLV,Healthcare
+VRTX,Vertex Pharmaceuticals Inc,0.91%,XLV,Healthcare
+BXLT,Baxalta Inc,0.88%,XLV,Healthcare
+MYL,Mylan NV,0.85%,XLV,Healthcare
+PRGO,Perrigo Company plc,0.85%,XLV,Healthcare
+ISRG,Intuitive Surgical Inc,0.82%,XLV,Healthcare
+HCA,HCA Holdings Inc,0.80%,XLV,Healthcare
+BAX,Baxter Intl Inc,0.78%,XLV,Healthcare
+ZTS,Zoetis Inc,0.77%,XLV,Healthcare
+ABC,AmerisourceBergen Corp,0.72%,XLV,Healthcare
+CERN,Cerner Corp,0.68%,XLV,Healthcare
+ZBH,Zimmer Biomet Holdings Inc,0.67%,XLV,Healthcare
+EW,Edwards Lifesciences Corp,0.66%,XLV,Healthcare
+STJ,St Jude Medical Inc,0.62%,XLV,Healthcare
+BCR,Bard C.R. Inc,0.56%,XLV,Healthcare
+A,Agilent Technologies Inc,0.49%,XLV,Healthcare
+ENDP,Endo International plc,0.47%,XLV,Healthcare
+HSIC,Schein Henry Inc,0.47%,XLV,Healthcare
+LH,Lab Corp of America Hldgs,0.45%,XLV,Healthcare
+DVA,DaVita HealthCare Partners Inc,0.43%,XLV,Healthcare
+WAT,Waters Corp,0.40%,XLV,Healthcare
+DGX,Quest Diagnostics,0.38%,XLV,Healthcare
+UHS,Universal Health Services B,0.38%,XLV,Healthcare
+XRAY,Dentsply Intl,0.31%,XLV,Healthcare
+VAR,Varian Medical Systems Inc,0.29%,XLV,Healthcare
+MNK,Mallinckrodt plc,0.29%,XLV,Healthcare
+PKI,PerkinElmer Inc,0.21%,XLV,Healthcare
+PDCO,Patterson Cos Inc,0.13%,XLV,Healthcare
+THC,Tenet Healthcare,0.10%,XLV,Healthcare
+GE,General Electric Co,11.66%,XLI,Industrials
+MMM,3M Co,5.21%,XLI,Industrials
+BA,Boeing Co,4.84%,XLI,Industrials
+HON,Honeywell Intl Inc,4.70%,XLI,Industrials
+UTX,United Technologies Corp,4.37%,XLI,Industrials
+UNP,Union Pacific Corp,3.85%,XLI,Industrials
+UPS,United Parcel Service Inc B,3.77%,XLI,Industrials
+LMT,Lockheed Martin,3.51%,XLI,Industrials
+DHR,Danaher Corp,3.38%,XLI,Industrials
+GD,General Dynamics,2.42%,XLI,Industrials
+RTN,Raytheon Co,2.31%,XLI,Industrials
+CAT,Caterpillar Inc,2.24%,XLI,Industrials
+DAL,Delta Air Lines,2.17%,XLI,Industrials
+NOC,Northrop Grumman Corp,2.14%,XLI,Industrials
+FDX,FedEx Corp,2.12%,XLI,Industrials
+PCP,Precision Castparts Corp,1.88%,XLI,Industrials
+EMR,Emerson Electric Co,1.77%,XLI,Industrials
+ITW,Illinois Tool Works Inc,1.69%,XLI,Industrials
+LUV,Southwest Airlines Co,1.64%,XLI,Industrials
+ETN,Eaton Corp plc,1.62%,XLI,Industrials
+CSX,CSX Corporation,1.56%,XLI,Industrials
+CMI,Cummins Inc,1.54%,XLI,Industrials
+DE,Deere & Co,1.53%,XLI,Industrials
+AAL,American Airlines Group Inc.,1.50%,XLI,Industrials
+NSC,Norfolk Southern Corp,1.42%,XLI,Industrials
+WM,Waste Management Inc,1.42%,XLI,Industrials
+PCAR,PACCAR Inc,1.13%,XLI,Industrials
+UAL,United Continental Holding Inc,1.03%,XLI,Industrials
+EFX,Equifax Inc,1.00%,XLI,Industrials
+ROP,"Roper Technologies, Inc",1.00%,XLI,Industrials
+NLSN,Nielsen Holdings plc,0.97%,XLI,Industrials
+ROK,Rockwell Automation Inc,0.92%,XLI,Industrials
+PH,Parker-Hannifin Corp,0.91%,XLI,Industrials
+COL,Rockwell Collins,0.85%,XLI,Industrials
+GWW,Grainger W.W. Inc,0.84%,XLI,Industrials
+SWK,Stanley Black & Decker,0.83%,XLI,Industrials
+IR,Ingersoll-Rand Plc,0.78%,XLI,Industrials
+TXT,Textron Inc,0.76%,XLI,Industrials
+TYC,Tyco Intl,0.76%,XLI,Industrials
+AME,AMETEK Inc,0.66%,XLI,Industrials
+VRSK,Verisk Analytics Inc,0.66%,XLI,Industrials
+FAST,Fastenal Co,0.65%,XLI,Industrials
+RSG,Republic Services Inc,0.61%,XLI,Industrials
+DOV,Dover Corp,0.59%,XLI,Industrials
+SRCL,Stericycle Inc,0.59%,XLI,Industrials
+MAS,Masco Corp,0.57%,XLI,Industrials
+CHRW,CH Robinson Worldwide Inc,0.55%,XLI,Industrials
+SNA,Snap On Inc,0.53%,XLI,Industrials
+FLR,Fluor Corp,0.52%,XLI,Industrials
+LLL,L-3 Communications Holdings,0.52%,XLI,Industrials
+CTAS,Cintas Corp,0.51%,XLI,Industrials
+EXPD,Expeditors Intl of WA Inc,0.48%,XLI,Industrials
+RHI,Robert Half Intl Inc,0.48%,XLI,Industrials
+PNR,Pentair PLC,0.47%,XLI,Industrials
+KSU,Kansas City Southern Inc,0.43%,XLI,Industrials
+XYL,Xylem Inc,0.36%,XLI,Industrials
+JBHT,Hunt J.B. Transport Services,0.36%,XLI,Industrials
+ALLE,Allegion plc,0.34%,XLI,Industrials
+URI,United Rentals Inc,0.32%,XLI,Industrials
+ADT,The ADT Corp.,0.29%,XLI,Industrials
+FLS,Flowserve Corp,0.29%,XLI,Industrials
+R,Ryder System Inc,0.29%,XLI,Industrials
+JEC,Jacobs Engineering Group Inc,0.27%,XLI,Industrials
+PBI,Pitney Bowes Inc,0.25%,XLI,Industrials
+DNB,Dun & Bradstreet Corp,0.21%,XLI,Industrials
+PWR,Quanta Services Inc,0.17%,XLI,Industrials
+DOW,Dow Chemical,11.09%,XLB,Materials
+DD,E. I. du Pont de Nemours and Company,10.94%,XLB,Materials
+MON,Monsanto Co.,9.22%,XLB,Materials
+LYB,LyondellBasell Industries N.V.,6.44%,XLB,Materials
+ECL,Ecolab Inc,6.37%,XLB,Materials
+PX,Praxair Inc,4.97%,XLB,Materials
+PPG,PPG Industries Inc,4.90%,XLB,Materials
+APD,Air Products & Chemicals Inc,4.72%,XLB,Materials
+SHW,Sherwin-Williams Co,4.66%,XLB,Materials
+IP,Intl Paper Co,3.60%,XLB,Materials
+VMC,Vulcan Materials Co,2.74%,XLB,Materials
+NUE,Nucor Corp,2.72%,XLB,Materials
+WRK,WestRock Co,2.34%,XLB,Materials
+BLL,Ball Corp,2.28%,XLB,Materials
+EMN,Eastman Chemical Co,2.26%,XLB,Materials
+IFF,Intl Flavors & Fragrances,2.24%,XLB,Materials
+ARG,Airgas Inc,2.21%,XLB,Materials
+AA,Alcoa Inc,2.16%,XLB,Materials
+NEM,Newmont Mining Corp,2.16%,XLB,Materials
+MLM,Martin Marietta Materials,2.00%,XLB,Materials
+SEE,Sealed Air Corp,1.99%,XLB,Materials
+MOS,Mosaic Co,1.95%,XLB,Materials
+CF,CF Industries Holdings,1.70%,XLB,Materials
+AVY,Avery Dennison Corp,1.41%,XLB,Materials
+FMC,FMC Corp,1.21%,XLB,Materials
+FCX,Freeport-McMoRan Inc,1.13%,XLB,Materials
+OI,Owens-Illinois Inc,0.59%,XLB,Materials
+SPG,Simon Property Group A,11.99%,XLRE,Real Estate
+AMT,American Tower Corp A,8.17%,XLRE,Real Estate
+PSA,Public Storage,7.54%,XLRE,Real Estate
+EQR,Equity Residential,5.85%,XLRE,Real Estate
+CCI,Crown Castle Intl Corp,5.63%,XLRE,Real Estate
+AVB,AvalonBay Communities Inc,4.77%,XLRE,Real Estate
+HCN,Welltower Inc,4.33%,XLRE,Real Estate
+EQIX,Equinix Inc,4.21%,XLRE,Real Estate
+PLD,ProLogis Inc,4.18%,XLRE,Real Estate
+BXP,Boston Properties Inc,3.83%,XLRE,Real Estate
+VTR,Ventas Inc,3.72%,XLRE,Real Estate
+HCP,HCP Inc,3.46%,XLRE,Real Estate
+VNO,Vornado Realty Trust,3.38%,XLRE,Real Estate
+GGP,General Growth Properties Inc,3.32%,XLRE,Real Estate
+ESS,Essex Property Trust,3.18%,XLRE,Real Estate
+O,Realty Income Corp,2.79%,XLRE,Real Estate
+WY,Weyerhaeuser Co,2.75%,XLRE,Real Estate
+KIM,Kimco Realty Corp,2.37%,XLRE,Real Estate
+MAC,Macerich Co,2.29%,XLRE,Real Estate
+EXR,Extra Space Storage Inc,2.23%,XLRE,Real Estate
+HST,Host Hotels & Resorts Inc,2.20%,XLRE,Real Estate
+SLG,SL Green Realty Corp,2.11%,XLRE,Real Estate
+CBG,CBRE Group Inc.,1.81%,XLRE,Real Estate
+PCL,Plum Creek Timber Co,1.54%,XLRE,Real Estate
+AIV,Apartment Investment & Mgmt,1.33%,XLRE,Real Estate
+IRM,Iron Mountain Inc,1.01%,XLRE,Real Estate
+AAPL,Apple Inc.,14.48%,XLK,Technology
+MSFT,Microsoft Corp,10.69%,XLK,Technology
+FB,Facebook Inc A,5.69%,XLK,Technology
+GOOGL,Alphabet Inc A,5.56%,XLK,Technology
+T,AT&T Inc,5.54%,XLK,Technology
+GOOG,Alphabet Inc C,5.52%,XLK,Technology
+VZ,Verizon Communications Inc,4.93%,XLK,Technology
+V,Visa Inc A,3.62%,XLK,Technology
+INTC,Intel Corp,3.08%,XLK,Technology
+CSCO,Cisco Systems Inc,3.04%,XLK,Technology
+ORCL,Oracle Corp,2.87%,XLK,Technology
+IBM,Intl Business Machines Corp,2.80%,XLK,Technology
+MA,Mastercard Inc A,2.28%,XLK,Technology
+QCOM,QUALCOMM Inc,1.86%,XLK,Technology
+ACN,Accenture plc A,1.64%,XLK,Technology
+TXN,Texas Instruments Inc,1.33%,XLK,Technology
+CRM,Salesforce.com,1.23%,XLK,Technology
+EMC,EMC Corp,1.23%,XLK,Technology
+ADBE,Adobe Systems Inc,1.18%,XLK,Technology
+ADP,Automatic Data Processing,0.98%,XLK,Technology
+CTSH,Cognizant Tech Solutions Corp,0.98%,XLK,Technology
+PYPL,PayPal Holdings Inc.,0.90%,XLK,Technology
+AVGO,Avago Technologies Ltd,0.84%,XLK,Technology
+BRCM,Broadcom Corp A,0.80%,XLK,Technology
+EBAY,eBay Inc.,0.76%,XLK,Technology
+YHOO,Yahoo Inc,0.68%,XLK,Technology
+INTU,Intuit Inc,0.66%,XLK,Technology
+EA,Electronic Arts,0.59%,XLK,Technology
+FISV,Fiserv Inc,0.57%,XLK,Technology
+TEL,TE Connectivity Ltd.,0.57%,XLK,Technology
+GLW,Corning Inc,0.53%,XLK,Technology
+AMAT,Applied Materials Inc,0.51%,XLK,Technology
+HPE,Hewlett Packard Enterprise Co,0.51%,XLK,Technology
+FIS,Fidelity National Information,0.46%,XLK,Technology
+ATVI,Activision Blizzard Inc,0.46%,XLK,Technology
+ADI,Analog Devices Inc,0.43%,XLK,Technology
+PAYX,Paychex Inc,0.42%,XLK,Technology
+APH,Amphenol Corp A,0.41%,XLK,Technology
+ADS,Alliance Data Systems Corp,0.39%,XLK,Technology
+NVDA,Nvidia Corp,0.39%,XLK,Technology
+HPQ,HP Inc,0.38%,XLK,Technology
+SNDK,SanDisk Corp,0.38%,XLK,Technology
+RHT,Red Hat Inc,0.37%,XLK,Technology
+CTL,CenturyLink Inc,0.35%,XLK,Technology
+SYMC,Symantec Corp,0.35%,XLK,Technology
+LVLT,Level 3 Communications,0.35%,XLK,Technology
+XLNX,Xilinx Inc,0.34%,XLK,Technology
+MU,Micron Technology Inc,0.33%,XLK,Technology
+SWKS,Skyworks Solutions Inc,0.33%,XLK,Technology
+ADSK,Autodesk Inc,0.31%,XLK,Technology
+HRS,Harris Corp,0.29%,XLK,Technology
+CTXS,Citrix Systems Inc,0.28%,XLK,Technology
+KLAC,KLA-Tencor Corporation,0.28%,XLK,Technology
+LRCX,Lam Research Corp,0.28%,XLK,Technology
+WDC,Western Digital Corp,0.28%,XLK,Technology
+LLTC,Linear Technology Corp,0.27%,XLK,Technology
+MSI,Motorola Solutions Inc,0.26%,XLK,Technology
+JNPR,Juniper Networks Inc,0.25%,XLK,Technology
+MCHP,Microchip Technology Inc,0.25%,XLK,Technology
+AKAM,Akamai Technologies Inc,0.24%,XLK,Technology
+XRX,Xerox Corp,0.24%,XLK,Technology
+TSS,Total System Services Inc,0.23%,XLK,Technology
+WU,Western Union Co,0.23%,XLK,Technology
+CA,CA Inc,0.22%,XLK,Technology
+STX,Seagate Technology,0.21%,XLK,Technology
+VRSN,VeriSign Inc,0.21%,XLK,Technology
+FFIV,F5 Networks Inc,0.17%,XLK,Technology
+NTAP,NetApp Inc,0.17%,XLK,Technology
+FTR,Frontier Communications Corp,0.16%,XLK,Technology
+QRVO,"Qorvo, Inc",0.15%,XLK,Technology
+FSLR,First Solar Inc,0.13%,XLK,Technology
+FLIR,FLIR Systems Inc,0.12%,XLK,Technology
+CSRA,CSRA Inc,0.10%,XLK,Technology
+TDC,Teradata Corp,0.09%,XLK,Technology
+NEE,NextEra Energy Inc,9.11%,XLU,Utilities
+DUK,Duke Energy Corp,8.50%,XLU,Utilities
+SO,Southern Co,7.99%,XLU,Utilities
+D,Dominion Resources Inc,7.71%,XLU,Utilities
+AEP,American Electric Power,5.35%,XLU,Utilities
+PCG,PG&E Corporation,4.79%,XLU,Utilities
+EXC,Exelon Corp,4.78%,XLU,Utilities
+PPL,PPL Corp,4.26%,XLU,Utilities
+SRE,Sempra Energy,4.12%,XLU,Utilities
+PEG,Public Service Enterprise Grp,3.74%,XLU,Utilities
+ED,Consolidated Edison Inc,3.72%,XLU,Utilities
+EIX,Edison Intl,3.63%,XLU,Utilities
+XEL,Xcel Energy Inc,3.48%,XLU,Utilities
+WEC,WEC Energy Group Inc,3.14%,XLU,Utilities
+ES,Eversource Energy,3.04%,XLU,Utilities
+DTE,DTE Energy Co,2.74%,XLU,Utilities
+FE,FirstEnergy Corp,2.53%,XLU,Utilities
+ETR,Entergy Corp,2.27%,XLU,Utilities
+AEE,Ameren Corp,1.95%,XLU,Utilities
+CMS,CMS Energy Corp,1.92%,XLU,Utilities
+SCG,SCANA Corp,1.62%,XLU,Utilities
+CNP,Centerpoint Energy Inc,1.44%,XLU,Utilities
+GAS,AGL Resources,1.42%,XLU,Utilities
+PNW,Pinnacle West Capital (AZ),1.35%,XLU,Utilities
+POM,Pepco Holdings Inc,1.25%,XLU,Utilities
+NI,Nisource Inc,1.22%,XLU,Utilities
+TE,TECO Energy Inc,1.20%,XLU,Utilities
+AES,AES Corp,1.15%,XLU,Utilities
+NRG,NRG Energy,0.58%,XLU,Utilities
