@@ -28,7 +28,7 @@ class stock(object):
     @property
     def bench(self, tic = 'SPY', start='2010-01-01', end='2012-09-20'):
         '''Creates benchmark portfolio.  Currently assumes SPY.'''
-        return stock(tic)
+        return stock(tic, start = start, end = end)
 
     @bench.setter
     def bench(self, tic, start, end):
@@ -52,13 +52,13 @@ class stock(object):
         Starting Date : {1}
         Ending Date : {2}'''.format(self.ticker,self.start,self.end)
 
-    def roll_beta(self, window = 60, market = 'SPY'):
+    def roll_beta(self, window = 60):
         '''Computes rolling beta against specified index.  Not sure how this should get returned.'''
-        model = pd.ols(y = self['Close'], x = self.bench['Close'], window_type = 'rolling', window=window)
-        return model
-#   model=pd.ols(y=sym[price_def], x=SPY[price_def], window_type='rolling', 
-#                 window=wind, weights=sym['volume'])
-#    model.beta.columns = [price_def+'_beta'+str(wind),price_def+'_alpha'+str(wind)] #rename for plotting 
+        try:
+            model = pd.ols(y = self['Close'], x = self.bench['Close'], window_type = 'rolling', window=window)
+            return model
+        except AttributeError:
+            print("AttributeError: Need to specify your benchmark by setting the bench attribute in your stock.")
 
     def set_strategy(self, name, function):
         '''Ideally for a function which can operate on the rows of self.data, create a new attribute with strategy name.
