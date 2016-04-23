@@ -1,4 +1,15 @@
 symbol,company_name,index_weight,sector,sector_name
+XLP,Consumper Staples,NaN,NaN,NaN
+XLY,Consumer Discretionary,NaN,NaN,NaN
+XLE,Energy,NaN,NaN,NaN
+XLFS,Financial Services,NaN,NaN,NaN
+XLV,Healthcare,NaN,NaN,NaN
+XLI,Industrials,NaN,NaN,NaN
+XLB,Materials,NaN,NaN,NaN
+XLRE,Consumper Staples,NaN,NaN,NaN
+XLK,Technology,NaN,NaN,NaN
+XLU,Consumper Staples,NaN,NaN,NaN
+SPY,S&P500,NaN,NaN,NaN
 PG,Procter & Gamble,11.90%,XLP,Consumper Staples
 KO,Coca-Cola Co,9.31%,XLP,Consumper Staples
 PM,Philip Morris International,7.61%,XLP,Consumper Staples
@@ -503,14 +514,3 @@ NI,Nisource Inc,1.22%,XLU,Utilities
 TE,TECO Energy Inc,1.20%,XLU,Utilities
 AES,AES Corp,1.15%,XLU,Utilities
 NRG,NRG Energy,0.58%,XLU,Utilities
-XLP,Consumper Staples,NaN,NaN,NaN
-XLY,Consumer Discretionary,NaN,NaN,NaN
-XLE,Energy,NaN,NaN,NaN
-XLFS,Financial Services,NaN,NaN,NaN
-XLV,Healthcare,NaN,NaN,NaN
-XLI,Industrials,NaN,NaN,NaN
-XLB,Materials,NaN,NaN,NaN
-XLRE,Consumper Staples,NaN,NaN,NaN
-XLK,Technology,NaN,NaN,NaN
-XLU,Consumper Staples,NaN,NaN,NaN
-SPY,S&P500,NaN,NaN,NaN
