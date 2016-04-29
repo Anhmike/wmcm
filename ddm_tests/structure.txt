@@ -1,26 +1,21 @@
 ## stock class
 
-.prices.get_raw(interval=d)
-.prices.raw.d
-.prices.raw.w
-.prices.raw.m
+.prices.get_raw(interval=m)
+# Method that sets the following attributes: .prices.raw.d, .prices.raw.w, .prices.raw.m
 
-.prices.get_adj(interval=d)
-.prices.adj.d
-.prices.adj.w
-.prices.adj.m
+.prices.get_adj(interval=m)
+# Method that sets the following attributes: .prices.adj.d, .prices.adj.w, .prices.adj.m
 
-.returns_get(interval=d)
-.returns.d
-.returns.w
-.returns.m
+.returns_get(interval=m)
+# Method that sets the following attributes: .returns.d, .returns.w, .returns.m
 
 .sector
-# If neither, return np.nan
+# Links to etf that shows sector return for a given period of time.
 
 # On initialization:
-# input ticker, interval (default to m), sector (default to .loc of ticker in universe file), market (default to SPY)
+# input ticker, interval (default to m), sector (default to .loc of ticker in universe file), market (default to SPY), start, end
 # Run prices.get_raw(), prices.get_adj() and returns_get() for the appropriate interval
+# Start and end will be passed to get_raw method.
 
 ## sector class
 # similar to stock class except doesn't have a sector property
