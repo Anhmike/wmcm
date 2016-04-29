@@ -1,23 +1,18 @@
-Classes:
+stock attributes
 
-stock
-	Attributes:
-		name - Full company name
-		sector - If available, S&P sector ticker.
-		prices - price history, adjusted for splits and dividends
-		start - first day of data
-		end - last day of data
-		returns - returns based on price
-	Methods:
-		ta_MA(n) - Moving Average for length n
-		ta_VWMA(n) - Volume Weighted Moving Average for length n
-		ta_RSI(n=14) - Relative Strength Index for length n
-		ta_EoM(n=14) - Ease of movement for length n
+.prices.raw(interval=d)
+.prices.raw.d
+.prices.raw.w
+.prices.raw.m
 
-strat
-	This means something.
+.prices.adj(interval=d)
+.prices.adj.d
+.prices.adj.w
+.prices.adj.m
 
+.returns(interval=d)
+.returns.d
+.returns.w
+.returns.m
 
-Functions:
-strat_results(universe, strat, length)
-	Tracks strat results for all stocks in a universe for length days
+.sector
