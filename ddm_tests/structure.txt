@@ -1,18 +1,31 @@
-stock attributes
+## stock class
 
-.prices.raw(interval=d)
+.prices.get_raw(interval=d)
 .prices.raw.d
 .prices.raw.w
 .prices.raw.m
 
-.prices.adj(interval=d)
+.prices.get_adj(interval=d)
 .prices.adj.d
 .prices.adj.w
 .prices.adj.m
 
-.returns(interval=d)
+.returns_get(interval=d)
 .returns.d
 .returns.w
 .returns.m
 
 .sector
+# If neither, return np.nan
+
+# On initialization:
+# input ticker, interval (default to m), sector (default to .loc of ticker in universe file), market (default to SPY)
+# Run prices.get_raw(), prices.get_adj() and returns_get() for the appropriate interval
+
+## sector class
+# similar to stock class except doesn't have a sector property
+
+## market class
+# similar to sector class except doesn't have a market property
+
+## I need something (function? class?) that creates an "analysis_df" and prepares for a beta calculation
