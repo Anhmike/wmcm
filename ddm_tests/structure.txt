@@ -10,7 +10,7 @@
 # Method that sets the following attributes: .returns.d, .returns.w, .returns.m
 
 .sector
-# Links to etf that shows sector return for a given period of time.
+# String used to link to etf that shows sector return for a given period of time. See sector class.
 
 # On initialization:
 # input ticker, interval (default to m), sector (default to .loc of ticker in universe file), market (default to SPY), start, end
