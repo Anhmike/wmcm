@@ -29,16 +29,43 @@ class stock(object):
         except AttributeError:
             self._ticker = value
 
-    @property
-    def bench(self, tic = 'SPY', start='2010-01-01', end='2012-09-20'):
-        '''Creates benchmark portfolio.  Currently assumes SPY.'''
-        return stock(tic, start = start, end = end)
+    # I'm not fucking with that @property shit. I try to keep it real, n-word.
+    def prices.get_raw(self, interval = 'm', start, end):
+        history = data.YahooDailyReader(self._ticker, start = start, end = end, interval = interval)
+        # Need to add assertion here that interval is m, w, d or v.
+        if interval = 'm':
+            self.prices.raw.m = history.read()
+        elif interval = 'w':
+            self.prices.raw.w = history.read()
+        elif interval = 'd':
+            self.prices.raw.d = history.read()
+        elif interval = 'v':
+            self.prices.raw.v = history.read()
 
-    @bench.setter
-    def bench(self, tic, start, end):
-        self._bench = self.bench(tic, start, end)
+    def prices.get_adj(self, interval = 'm'):
+        # Need to add assertion here that interval is m, w, d or v.
+        if interval = 'm':
+            self.prices.adj.m = wmf.adjust_prices(self.prices.raw.m)
+        elif interval = 'w':
+            self.prices.adj.w = wmf.adjust_prices(self.prices.raw.w)
+        elif interval = 'd':
+            self.prices.adj.d = wmf.adjust_prices(self.prices.raw.d)
+        elif interval = 'v':
+            self.prices.adj.v = wmf.adjust_prices(self.prices.raw.v)
+    
+    def returns_get(self, interval = 'm'):
+        # Need to add assertion here that interval is m, w, d or v.
+        if interval = 'm':
+            self.returns.m = wmf.get_returns(self.prices.adj.m)
+        elif interval = 'w':
+            self.returns.w = wmf.get_returns(self.prices.adj.w)
+        elif interval = 'd':
+            self.returns.d = wmf.get_returns(self.prices.adj.d)
+        elif interval = 'v':
+            self.returns.v = wmf.get_returns(self.prices.adj.v)
 
-    def __init__(self, tic, start='2010-01-01', end='2012-09-20', interval='d'):
+
+    def __init__(self, tic, start='2010-01-01', end='201-12-31', interval='m'):
         if tic is None:
             tic='SPY'
         assert type(tic)==str, 'Ticker must be a string.'
@@ -46,9 +73,9 @@ class stock(object):
         self.ticker = tic.strip()
         self.start = dt.datetime.strptime(start, '%Y-%m-%d')
         self.end = dt.datetime.strptime(end, '%Y-%m-%d')
-        self.raw = data.YahooDailyReader(tic, start = start, end = end, interval = interval).read()
-        # self.adj = wmf.adjust_prices(self.raw)
-        # self.returns = wmf.add_returns(self.adj)
+        self.prices.get_raw(self, start=start, end=end, interval=interval)
+        self.prices.get_adj(self, interval=interval)
+        self.returns_get(self, interval=interval)
 
     def __getitem__(self,key):
         return self.data[key]
@@ -57,24 +84,3 @@ class stock(object):
         return '''Stock : {0}
         Starting Date : {1}
         Ending Date : {2}'''.format(self.ticker,self.start,self.end)
-
-    def roll_beta(self, window = 60):
-        '''Computes rolling beta against specified index.  Not sure how this should get returned.'''
-        try:
-            model = pd.ols(y = self['Close'], x = self.bench['Close'], window_type = 'rolling', window=window)
-            return model
-        except AttributeError:
-            print("AttributeError: Need to specify your benchmark by setting the bench attribute in your stock.")
-
-    def set_strategy(self, name, function):
-        '''Ideally for a function which can operate on the rows of self.data, create a new attribute with strategy name.
-        This setup would imply all relevant information should be hardcoded back into self.data (e.g., betas)
-        Still need to consider how our backtesting / results summary will work before deciding what constraints to put on allowable functions.
-        ========================
-        Example Usage:
-        >>> AAPL = wmcm.stock("AAPL")
-        >>> AAPL.set_strategy("buy_everything", lambda : return 'BUY!')
-        >>> AAPL.buy_everything()
-        'BUY!' '''
-
-        setattr(self, name, function)

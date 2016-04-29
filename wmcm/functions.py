@@ -18,7 +18,7 @@ def adjust_prices(df):
     new_df.columns = ['sector', 'symbol', 'open', 'high', 'low', 'close', 'volume']
     return new_df
 
-def add_returns(df):
+def get_returns(df):
     df['lastClose'] = df['close'].shift(1)
     df['ret_cc'] = np.log(df['close'] / df['lastClose'])
     df['ret_oc'] = np.log(df['close'] / df['open'])
