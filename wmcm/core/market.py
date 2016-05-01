@@ -32,7 +32,7 @@ class Market(object):
         history = data.YahooDailyReader(self.ticker, self.start, self.end, interval=interval)
         return history.read()
 
-    def __init__(self, tic, start='2010-01-01', end='2015-12-31', interval='m'):
+    def __init__(self, tic, start='2011-01-01', end='2015-12-31', interval='m'):
         self.ticker = tic
         self.interval = interval
         self.start = dt.datetime.strptime(start, '%Y-%m-%d')
