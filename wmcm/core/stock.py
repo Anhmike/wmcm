@@ -21,7 +21,7 @@ class Stock(Market):
         '''Function for retrieving earnings dates for the given stock.'''
         data = pd.read_csv('http://mt.tl/eps.php?symbol={}'.format(self.ticker))
         if len(data)<1:
-            warnings.warn("No Earnings Data found!") 
+            warnings.warn("No Earnings Data found for {}!".format(self.ticker)) 
         return data 
 
     def add_dates(self):
