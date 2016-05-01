@@ -16,49 +16,46 @@ class stock(object):
         'm' for monthly and 'v' for dividend.
     '''
 
-    # I'm not fucking with that @property shit. I try to keep it real, n-word.
-    def get_raw_prices(self):
-        history = data.YahooDailyReader(self.ticker, self.start, self.end, interval=self.interval)
-        # Need to add assertion here that interval is m, w, d or v.
-        if self.interval == 'm':
-            self.prices_raw_m = history.read()
-        elif self.interval == 'w':
-            self.prices_raw_w = history.read()
-        elif self.interval == 'd':
-            self.prices_raw_d = history.read()
-        elif self.interval == 'v':
-            self.prices_raw_v = history.read()
+    # I'm not fucking with that @property shit. I try to keep it real
+    def set_raw_prices(self, interval=self.interval):
+        '''What does this function do?'''
 
-    def get_adj_prices(self):
-        # Need to add assertion here that interval is m, w, d or v.
-        if self.interval == 'm':
-            self.prices_adj_m = wmf.adjust_prices(self.prices_raw_m)
-        elif self.interval == 'w':
-            self.prices_adj_w = wmf.adjust_prices(self.prices_raw_w)
-        elif self.interval == 'd':
-            self.prices_adj_d = wmf.adjust_prices(self.prices_raw_d)
-        elif self.interval == 'v':
-            self.prices_adj_v = wmf.adjust_prices(self.prices_raw_v)
+        ## download history at specified interval; note that interval is defaulted to the class attribute
+        ## but can be adjusted accordingly
+        history = data.YahooDailyReader(self.ticker, self.start, self.end)
     
-    def returns_get(self):
-        # Need to add assertion here that interval is m, w, d or v.
-        if self.interval == 'm':
-            self.returns_m = wmf.get_returns(self.prices_adj_m)
-        elif self.interval == 'w':
-            self.returns_w = wmf.get_returns(self.prices_adj_w)
-        elif self.interval == 'd':
-            self.returns_d = wmf.get_returns(self.prices_adj_d)
-        elif self.interval == 'v':
-            self.returns_v = wmf.get_returns(self.prices_adj_v)
+        assert interval in ['m','w','d','v'], "Passed 'interval' of {} is not a valid type.".format(interval)    
 
+        ## set prices_raw, which is now a dictionary indexed by interval
+        self.prices_raw[interval] = history.read()
+
+        return None # this is not necessary but I find it helps remind me of the functions purpose
+
+    def set_adj_prices(self, interval=self.interval):
+        '''Get adjusted prices...'''
+
+        assert interval in ['m','w','d','v'], "Passed 'interval' of {} is not a valid type.".format(interval)
+
+        self.prices_adj[interval] = wmf.adjust_prices(self.prices_raw[interval]
+
+        return None
+    
+    def returns_get(self, interval=self.interval):
+        '''Function purpose?'''
+
+        assert interval in ['m','w','d','v'], "Passed 'interval' of {} is not a valid type.".format(interval)
+
+        self.returns[interval] = wmf.get_returns(self.prices_adj[interval])
+
+        return None
 
     def __init__(self, tic, start='2010-01-01', end='2015-12-31', interval='m'):
         self.ticker = tic
         self.interval = interval
         self.start = dt.datetime.strptime(start, '%Y-%m-%d')
         self.end = dt.datetime.strptime(end, '%Y-%m-%d')
-        self.get_raw_prices()
-        self.get_adj_prices()
+        self.set_raw_prices()
+        self.set_adj_prices()
         self.returns_get()
 
     def __getitem__(self, key):
