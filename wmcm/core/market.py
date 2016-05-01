@@ -5,8 +5,8 @@ import warnings
 
 import wmcm.functions as wmf
 
-class Stock(Market):
-    '''Core Stock Class
+class Market(object):
+    '''Core Market Class
     Parameters:
     tic : (string) ticker symbol
     start : (string) beginning date of analysis period, in the format '%Y-%m-%d' (e.g. '2010-01-01')
@@ -32,13 +32,6 @@ class Stock(Market):
         history = data.YahooDailyReader(self.ticker, self.start, self.end, interval=interval)
         return history.read()
 
-    def get_earnings(self):
-        '''Function for retrieving earnings dates for the given stock.'''
-        data = pd.read_csv('http://mt.tl/eps.php?symbol={}'.format(self.ticker))
-        if len(data)<1:
-            warnings.warn("No Earnings Data found!") 
-        return data 
-
     def __init__(self, tic, start='2010-01-01', end='2015-12-31', interval='m'):
         self.ticker = tic
         self.interval = interval
@@ -52,7 +45,7 @@ class Stock(Market):
         return self.data[key]
 
     def __repr__(self):
-        return '''Stock : {0}
+        return '''Market Index : {0}
         Starting Date : {1}
         Ending Date : {2}
         Frequency : {3}'''.format(self.ticker, self.start, self.end, self.interval)
