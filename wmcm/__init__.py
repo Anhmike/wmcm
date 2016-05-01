@@ -1,1 +1,2 @@
-from wmcm.core.stock import stock
+from wmcm.core.stock import Stock
+from wmcm.core.stock import Market

@@ -3,6 +3,7 @@ import pandas as pd
 from pandas_datareader import data
 import warnings
 
+from wmcm.core.market import Market
 import wmcm.functions as wmf
 
 class Stock(Market):
@@ -15,22 +16,6 @@ class Stock(Market):
         Time interval code, valid values are 'd' for daily, 'w' for weekly,
         'm' for monthly and 'v' for dividend.
     '''
-
-    @property
-    def interval(self):
-        return self._interval
-
-    @interval.setter
-    def interval(self, value):
-        if value in ['m','w','d','v']:
-            self._interval = value
-        else:
-            raise ValueError("Passed interval of {} is not a valid interval type.".format(value))
-
-    def generate_raw_prices(self, interval):
-        '''Function for generating raw price time series from a given specified interval.'''
-        history = data.YahooDailyReader(self.ticker, self.start, self.end, interval=interval)
-        return history.read()
 
     def get_earnings(self):
         '''Function for retrieving earnings dates for the given stock.'''
@@ -67,10 +52,6 @@ class Stock(Market):
         self.earnings_df = self.get_earnings()
         self.earnings_dates = self.earnings_df['date']
         self.add_earnings()
-
-
-    def __getitem__(self, key):
-        return self.data[key]
 
     def __repr__(self):
         return '''Stock : {0}
