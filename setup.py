@@ -6,7 +6,6 @@ setup(
     author = "Chris White, Daniel Morgan",
     author_email = "white.cdw@gmail.com, daniel.freetime@gmail.com",
     description = ("Makin dolla billz look easy"),
-    license = "BSD",
     keywords = "",
     url = "https://github.com/moody-marlin/wmcm.git",
     install_requires = ['datetime',
