@@ -27,7 +27,7 @@ class stock(object):
         else:
             raise ValueError("Passed interval of {} is not a valid interval type.".format(value))
 
-    def generate_raw_prices(self, interval = self.interval):
+    def generate_raw_prices(self, interval):
         '''Function for generating raw price time series from a given specified interval.'''
         history = data.YahooDailyReader(self.ticker, self.start, self.end, interval=interval)
         return history.read()
@@ -44,7 +44,7 @@ class stock(object):
         self.interval = interval
         self.start = dt.datetime.strptime(start, '%Y-%m-%d')
         self.end = dt.datetime.strptime(end, '%Y-%m-%d')
-        self.raw_prices = self.generate_raw_prices(interval)
+        self.raw_prices = self.generate_raw_prices(self.interval)
         self.adj_prices = wmf.adjust_prices(self.raw_prices)
         self.adj_returns = wmf.get_returns(self.adj_prices)
 
