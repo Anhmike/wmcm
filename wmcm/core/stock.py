@@ -16,47 +16,30 @@ class stock(object):
         'm' for monthly and 'v' for dividend.
     '''
 
-    # I'm not fucking with that @property shit. I try to keep it real
-    def set_raw_prices(self, interval=self.interval):
-        '''What does this function do?'''
+    @property
+    def interval(self):
+        return self._interval
 
-        ## download history at specified interval; note that interval is defaulted to the class attribute
-        ## but can be adjusted accordingly
-        history = data.YahooDailyReader(self.ticker, self.start, self.end)
-    
-        assert interval in ['m','w','d','v'], "Passed 'interval' of {} is not a valid type.".format(interval)    
+    @interval.setter
+    def interval(self, value):
+        if value in ['m','w','d','v']:
+            self._interval = value
+        else:
+            raise ValueError("Passed interval of {} is not a valid interval type.".format(value))
 
-        ## set prices_raw, which is now a dictionary indexed by interval
-        self.prices_raw[interval] = history.read()
-
-        return None # this is not necessary but I find it helps remind me of the functions purpose
-
-    def set_adj_prices(self, interval=self.interval):
-        '''Get adjusted prices...'''
-
-        assert interval in ['m','w','d','v'], "Passed 'interval' of {} is not a valid type.".format(interval)
-
-        self.prices_adj[interval] = wmf.adjust_prices(self.prices_raw[interval]
-
-        return None
-    
-    def returns_get(self, interval=self.interval):
-        '''Function purpose?'''
-
-        assert interval in ['m','w','d','v'], "Passed 'interval' of {} is not a valid type.".format(interval)
-
-        self.returns[interval] = wmf.get_returns(self.prices_adj[interval])
-
-        return None
+    def generate_raw_prices(self, interval = self.interval):
+        '''Function for generating raw price time series from a given specified interval.'''
+        history = data.YahooDailyReader(self.ticker, self.start, self.end, interval=interval)
+        return history.read()
 
     def __init__(self, tic, start='2010-01-01', end='2015-12-31', interval='m'):
         self.ticker = tic
         self.interval = interval
         self.start = dt.datetime.strptime(start, '%Y-%m-%d')
         self.end = dt.datetime.strptime(end, '%Y-%m-%d')
-        self.set_raw_prices()
-        self.set_adj_prices()
-        self.returns_get()
+        self.raw_prices = self.generate_raw_prices(interval)
+        self.adj_prices = wmf.adjust_prices(self.raw_prices)
+        self.adj_returns = wmf.get_returns(self.adj_prices)
 
     def __getitem__(self, key):
         return self.data[key]
