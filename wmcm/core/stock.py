@@ -40,7 +40,7 @@ class Stock(Market):
             self.adj_returns['earnings_week'] = (self.adj_returns['earnings_week'] | period_vector)
 
 
-    def __init__(self, tic, start='2010-01-01', end='2015-12-31', interval='m'):
+    def __init__(self, tic, start='2011-01-01', end='2015-12-31', interval='m'):
         self.ticker = tic
         self.interval = interval
         self.start = dt.datetime.strptime(start, '%Y-%m-%d')
