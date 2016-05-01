@@ -14,8 +14,8 @@ def adjust_prices(df):
     df['High'] = df['High'] * df['AdjFactor']
     df['Low'] = df['Low'] * df['AdjFactor']
     df['Close'] = df['Close'] * df['AdjFactor']
-    new_df = df[['sector', 'symbol', 'Open', 'High', 'Low', 'Close', 'Volume']]
-    new_df.columns = ['sector', 'symbol', 'open', 'high', 'low', 'close', 'volume']
+    new_df = df[['Open', 'High', 'Low', 'Close', 'Volume']]
+    new_df.columns = ['open', 'high', 'low', 'close', 'volume']
     return new_df
 
 def get_returns(df):
