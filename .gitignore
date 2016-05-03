@@ -8,3 +8,9 @@
 
 # Python egg metadata, regenerated from source files by setuptools.
 /*.egg-info
+
+# git noise files
+.gitignore~
+
+# ipython notebook noise files
+*checkpoint*
