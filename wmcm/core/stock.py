@@ -3,7 +3,7 @@ import pandas as pd
 from pandas_datareader import data
 import warnings
 
-from wmcm.core.market import Market
+from Market import Market
 import wmcm.functions as wmf
 
 class Stock(Market):
