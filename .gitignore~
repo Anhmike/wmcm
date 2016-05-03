@@ -1,4 +1,0 @@
-## pip noise files
-*.pyc
-*.egg-info
-*.DS_Store
