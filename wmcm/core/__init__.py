@@ -1,3 +1,3 @@
-from Stock import Stock
-from Market import Market
-from Universe import Universe
+from wmcm.core.Market import Market
+from wmcm.core.Stock import Stock
+from wmcm.core.Universe import Universe

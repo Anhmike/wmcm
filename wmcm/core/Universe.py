@@ -1,8 +1,13 @@
-from Stock import Stock
-from Market import Market
+from wmcm.core.Stock import Stock
+from wmcm.core.Market import Market
 
 import pickle
 import warnings
+
+def _warning(message, category = UserWarning, filename = '', lineno = -1):
+    print(message)
+
+warnings.showwarning = _warning
 
 class Universe(dict):
     '''Class for storing dictionaries of Stock objects, along with a Market object.
@@ -19,6 +24,10 @@ class Universe(dict):
     dict_keys(['GOOG', 'COF', 'market'])
     '''
 
+    def _print(self, msg):
+        if self.verbose:
+            print(msg)
+        
     def save(self, filename):
         '''Pickles Universe object into filename.'''
         pickle.dump(self, open(filename, 'wb'))
@@ -28,13 +37,14 @@ class Universe(dict):
         '''Unpickles filename into new Universe instance.'''
         return pickle.load(open(filename, 'rb'))
 
-    def __init__(self, tics, market, start='2011-01-01', end='2015-12-31', interval='m'):
+    def __init__(self, tics, market, start='2011-01-01', end='2015-12-31', interval='m', verbose=True):
 
-        print('Loading the Market {}...'.format(market))
+        self.verbose = verbose
+        self._print('Loading the Market {}...'.format(market))
         self['market'] = Market(market, start=start, end=end, interval=interval)
 
         for tic in tics:
-            print('Loading {}...'.format(tic))
+            self._print('Loading {}...'.format(tic))
             try:
                 self[tic] = Stock(tic, start=start, end=end, interval=interval)
             except ValueError:

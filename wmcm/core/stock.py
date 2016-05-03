@@ -3,8 +3,13 @@ import pandas as pd
 from pandas_datareader import data
 import warnings
 
-from Market import Market
+from wmcm.core.Market import Market
 import wmcm.functions as wmf
+
+def _warning(message, category = UserWarning, filename = '', lineno = -1):
+    print(message)
+
+warnings.showwarning = _warning
 
 class Stock(Market):
     '''Core Stock Class
@@ -18,29 +23,34 @@ class Stock(Market):
     '''
 
     def get_earnings(self):
-        '''Function for retrieving earnings dates for the given stock.'''
+        '''Function for retrieving earnings dates for the given stock.
+        Returns a DataFrame of Earnings Dates.'''
         data = pd.read_csv('http://mt.tl/eps.php?symbol={}'.format(self.ticker))
         if len(data)<1:
             warnings.warn("No Earnings Data found for {}!".format(self.ticker)) 
         return data 
 
     def add_dates(self):
-        '''Adds a column giving the end date for a given return df.'''
+        '''Adds a column giving the start / end dates for the time period of each adjusted return.'''
         self.adj_returns['start_date'] = self.adj_returns.index
-        self.adj_returns['end_date'] = self.adj_returns.index
-        self.adj_returns['end_date'] = self.adj_returns['end_date'].shift(-1)
-        self.adj_returns['end_date'] = self.adj_returns['end_date'] - dt.timedelta(days=1)
+        self.adj_returns['end_date'] = self.adj_returns.start_date.shift(-1) - dt.timedelta(days=1)
         self.adj_returns.ix[-1, 'end_date'] = self.end
 
     def add_earnings(self):
-        '''True if earnings date in period, False if earnings date not in period'''
-        self.adj_returns['earnings_week'] = False #initialize false
+        '''Creates and stores earnings attributes;
+        Adds an "earnings_period" column to adjusted returns, which is 
+        True if earnings date in period, False if earnings date not in period'''
+
+        self.earnings_df = self.get_earnings()
+        self.earnings_dates = self.earnings_df['date']
+        self.adj_returns['earnings_period'] = False #initialize False
+
         for eDate in self.earnings_dates:
             period_vector = ((self.adj_returns['end_date'] >= eDate) & (eDate >= self.adj_returns['start_date']))
-            self.adj_returns['earnings_week'] = (self.adj_returns['earnings_week'] | period_vector)
+            self.adj_returns['earnings_period'] = (self.adj_returns['earnings_period'] | period_vector)
 
 
-    def __init__(self, tic, start='2011-01-01', end='2015-12-31', interval='m'):
+    def __init__(self, tic, start='2011-01-01', end='2015-12-31', interval='m', earn=True):
         self.ticker = tic
         self.interval = interval
         self.start = dt.datetime.strptime(start, '%Y-%m-%d')
@@ -49,9 +59,9 @@ class Stock(Market):
         self.adj_prices = wmf.adjust_prices(self.raw_prices)
         self.adj_returns = wmf.get_returns(self.adj_prices)
         self.add_dates()
-        self.earnings_df = self.get_earnings()
-        self.earnings_dates = self.earnings_df['date']
-        self.add_earnings()
+
+        if earn:
+            self.add_earnings()
 
     def __repr__(self):
         return '''Stock : {0}
