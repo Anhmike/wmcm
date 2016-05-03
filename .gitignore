@@ -13,4 +13,5 @@
 .gitignore~
 
 # ipython notebook noise files
+ddm_tests/.ipynb_checkpoints
 .ipynb_checkpoints
