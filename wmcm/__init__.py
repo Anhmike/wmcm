@@ -1,1 +1,1 @@
-from wmcm.core import Stock, Market, Universe
+from wmcm.core import Stock, Market, Universe, Portfolio

@@ -12,7 +12,7 @@ def _warning(message, category = UserWarning, filename = '', lineno = -1):
 
 warnings.showwarning = _warning
 
-class Stock(Market):
+class Portfolio(Market):
     '''Core Portfolio Class
     Used within backtests to track current holdings.
     Parameters:
@@ -20,17 +20,18 @@ class Stock(Market):
     '''
 
     def __init__(self, capital):
-        self.holdings = pd.DataFrame(columns=['security','quantity', 'price' 'market_value'])
+        self.holdings = pd.DataFrame(columns=['security','quantity', 'price', 'market_value'])
         self.holdings.set_index('security', inplace=True)
         self.holdings.loc['str8cash', 'quantity'] = capital
         self.holdings.loc['str8cash', 'price'] = 1
-        self.holdings.update_value()
+        self.update_value()
 
     def total_value(self):
+        self.update_value()
         return sum(self.holdings['market_value'])
 
     def update_value(self):
-        self.holdings.update_value()
+        self.holdings['market_value'] = self.holdings['quantity'] * self.holdings['price']
 
 
     def update_prices(self, universe, date, type='close'):
@@ -42,7 +43,7 @@ class Stock(Market):
         # Running on a Sunday will give us Friday's closing price.
         applied_date = date
         while applied_date not in universe['market'].adj_prices.index:
-            applied date -= dt.timedelta(days=1)
+            applied_date -= dt.timedelta(days=1)
 
         # Convert to string for indexing
         string_date = applied_date.strftime('%Y-%m-%d')
@@ -52,7 +53,7 @@ class Stock(Market):
                 continue
             self.holdings.loc[tic, 'price'] = universe[tic].adj_prices.loc[string_date, type]
 
-        self.holdings.update_value()
+        self.update_value()
 
     def open_position(self, tic, price, target_percent):
         '''Opens a new position. Assumes there are currently no holdings.
@@ -63,7 +64,7 @@ class Stock(Market):
 
         self.holdings.loc[tic] = [0, price, 0]
 
-        target_value = target_percent * self.total_value
+        target_value = target_percent * self.total_value()
         target_q = target_value / self.holdings.loc[tic, 'price']
         
         order_q = math.floor(target_q)
@@ -71,16 +72,17 @@ class Stock(Market):
 
         self.holdings.loc['str8cash', 'quantity'] -= order_value
         self.holdings.loc[tic, 'quantity'] += order_q
-        self.holdings.update_value()
+        self.update_value()
 
     def close_position(self, tic, price):
         '''Closes an existing position.
         tic : (string) ticker symbol
         price : Effective price
         '''
-
+        self.holdings.loc[tic, 'price'] = price
+        self.update_value()
         order_value = self.holdings.loc[tic, 'market_value']
         self.holdings.loc['str8cash', 'quantity'] += order_value
 
         self.holdings.drop(tic, inplace=True)
-        self.holdings.update_value()
+        self.update_value()
