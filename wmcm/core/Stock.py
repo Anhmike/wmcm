@@ -2,6 +2,7 @@ import datetime as dt
 import pandas as pd
 from pandas_datareader import data
 import warnings
+import yahoo_finance
 
 from wmcm.core.Market import Market
 import wmcm.functions as wmf
@@ -27,8 +28,8 @@ class Stock(Market):
         Returns a DataFrame of Earnings Dates.'''
         data = pd.read_csv('http://mt.tl/eps.php?symbol={}'.format(self.ticker))
         if len(data)<1:
-            warnings.warn("No Earnings Data found for {}!".format(self.ticker)) 
-        return data 
+            warnings.warn("No Earnings Data found for {}!".format(self.ticker))
+        return data
 
     def add_dates(self):
         '''Adds a column giving the start / end dates for the time period of each adjusted return.'''
@@ -38,7 +39,7 @@ class Stock(Market):
 
     def add_earnings(self):
         '''Creates and stores earnings attributes;
-        Adds an "earnings_period" column to adjusted returns, which is 
+        Adds an "earnings_period" column to adjusted returns, which is
         True if earnings date in period, False if earnings date not in period'''
 
         self.earnings_df = self.get_earnings()
@@ -58,6 +59,7 @@ class Stock(Market):
         self.raw_prices = self.generate_raw_prices(self.interval)
         self.adj_prices = wmf.adjust_prices(self.raw_prices)
         self.adj_returns = wmf.get_returns(self.adj_prices)
+        self.market_cap = yahoo_finance.Share(ticker).get_market_cap()
         self.add_dates()
 
         if earn:
