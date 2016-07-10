@@ -59,7 +59,7 @@ class Stock(Market):
         self.raw_prices = self.generate_raw_prices(self.interval)
         self.adj_prices = wmf.adjust_prices(self.raw_prices)
         self.adj_returns = wmf.get_returns(self.adj_prices)
-        self.market_cap = yahoo_finance.Share(ticker).get_market_cap()
+        self.market_cap = yahoo_finance.Share(self.ticker).get_market_cap()
         self.add_dates()
 
         if earn:
