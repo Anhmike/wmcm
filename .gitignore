@@ -65,5 +65,6 @@ target/
 ddm_tests/.ipynb_checkpoints
 .ipynb_checkpoints
 
-# Large pickle file
+# Large pickle files
 /ddm_tests/pickle/full_price_history.p
+/ddm_tests/pickle/*

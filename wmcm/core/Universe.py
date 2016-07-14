@@ -2,6 +2,7 @@ from wmcm.core.Stock import Stock
 from wmcm.core.Market import Market
 
 import pandas as pd
+import numpy as np
 import pickle
 import statsmodels.formula.api as smf
 import warnings
@@ -29,7 +30,7 @@ class Universe(dict):
     def _print(self, msg):
         if self.verbose:
             print(msg)
-        
+
     def save(self, filename):
         '''Pickles Universe object into filename.'''
         pickle.dump(self, open(filename, 'wb'))
@@ -46,7 +47,14 @@ class Universe(dict):
             if tic=='market':
                 pass
             else:
-                self.results[tic] = self.factor_model(tic, formula, filter_earnings = filter_earnings, env_lev=3)
+                try:
+                    self.results[tic] = self.factor_model(tic, formula, filter_earnings = filter_earnings, env_lev=3)
+                except ValueError:
+                    self.results[tic] = np.nan
+                except IndexError:
+                    self.results[tic] = np.nan
+                except KeyError:
+                    self.results[tic] = np.nan
 
     def factor_model(self, tic, formula, filter_earnings=True, env_lev=2):
         '''Fits a standard factor model based on the given formula; searches for variables in Stock.analysis_df attribute
