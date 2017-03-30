@@ -8,8 +8,16 @@ import finsymbols
 import pickle
 import seaborn as sns
 from pandas_datareader import data
+import random
 
-def run_analysis(universe, excess=False):
+def dotheshuffle(df):
+    new_index=list(df.index)
+    random.shuffle(new_index)
+    df=df.ix[new_index]
+    df.reset_index()
+    return df
+
+def run_analysis(universe, excess=False, shuffle=False):
 
     if excess:
         GS20 = data.DataReader('GS20', 'fred', dt.datetime(2010, 11, 1), dt.datetime(2015, 12, 1))/100
@@ -39,6 +47,11 @@ def run_analysis(universe, excess=False):
                 universe[key].analysis_df['lag_exc_ret_cc_market'] = universe[key].analysis_df['exc_ret_cc_market'].shift(1)
 
             universe[key].analysis_df = universe[key].analysis_df[2:] # Remove first two rows. With statsmodel 0.7.0, including nan's in train breaks predict
+
+            if shuffle:
+                universe[key].analysis_df['lag_ret_cc_market'] = dotheshuffle(universe[key].analysis_df['lag_ret_cc_market']).values
+                if excess:
+                    universe[key].analysis_df['lag_exc_ret_cc_market'] = dotheshuffle(universe[key].analysis_df['lag_exc_ret_cc_market']).values
 
             universe[key].model_sr = sm.ols('ret_cc ~ ret_cc_market',
                                             data=universe[key].analysis_df).fit()
